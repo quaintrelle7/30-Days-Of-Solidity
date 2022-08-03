@@ -1,4 +1,5 @@
 About Solidity:
+
 -Object Oriented
 -High Level Language
 -Influenced by C++. Python and Javascript
