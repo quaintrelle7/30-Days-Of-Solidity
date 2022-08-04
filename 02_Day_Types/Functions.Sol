@@ -1,0 +1,54 @@
+/*Internal Functions: Can only be called inside the Current Contract
+External: Consists of address and signature, can be passed via
+and returned from external function calls */
+
+function (<parameter types>) {internal|external} [pure|view|payable] [returns (<return types>)]
+
+/*-Parameter type can be empty
+- Return Type cannot be empty 
+- By default fun type is internal
+- Visibility to be specified explicitly, not default
+*/
+
+/* Function A can be converted to Function B iff
+1. Parameters and teturn type is identical
+2. internal/external property is identical
+3. State mutability of A is more restrictive than B  */
+
+/*
+pure functions can be converted to view and non-payable functions
+
+view functions can be converted to non-payable functions
+
+payable functions can be converted to non-payable functions.
+ */
+
+
+//How to use members
+
+//External or Public fns have .address and .selector members
+
+//.address = returns the address of the contract
+//.slector = trturns the ABI function selector
+//uses this. in external functions
+
+contract example{
+
+    function f() public payable retuns(bytes4){
+        assert(this.f.address==address(this));
+        return this.f.selector;
+    }
+
+    function g() public{
+        this.f{gas:10, value: 500}();
+    }
+}
+
+/*view tells us that by running the function, no data will be saved or changed.
+pure tells us that not only does the function not save any data to the blockchain,
+but it also doesn't read any data from the blockchain.
+Both of these don't cost any gas to call if they're called externally
+from outside the contract (but they do cost gas if called internally by another function).*/
+
+
+
