@@ -4,4 +4,6 @@
    Storage: Where the state vars are stores
    Lifetime is limited to the lifetime of a contract
    Calldata: Special Data locations that contains the fn arguments
+   -- Avoid copies also data cant be modified
  */
+
