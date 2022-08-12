@@ -125,3 +125,9 @@ Destroy the current contract, sending its funds to the given Address and end exe
 
 ## Type Information
 
+
+
+
+## Reserved Keywords
+
+after, alias, apply, auto, byte, case, copyof, default, define, final, implements, in, inline, let, macro, match, mutable, null, of, partial, promise, reference, relocatable, sealed, sizeof, static, supports, switch, typedef, typeof, var.
