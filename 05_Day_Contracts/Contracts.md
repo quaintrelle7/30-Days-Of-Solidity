@@ -1,0 +1,9 @@
+- Contrcats in solidity are similar to classes in OOPs languages.
+- Calling a function perform an EVM function call.
+- Contrcats can be created from outside via ethereum transactions or from within Solidity contracts.
+- A constructor is optional, only one is allowed, overloading is not supported.
+- After the constructor has executed the final code is stored on the blockchain.
+- The code includes: all public, external functions and the functions that are reachable from function calls.
+- The code not includes: constructor code or internal functions
+- Internally, constructor arguments are passed ABI encoded after the code of contract.
+- Cyclic creation dependencies ain't possible.
