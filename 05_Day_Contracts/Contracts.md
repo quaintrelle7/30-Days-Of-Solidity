@@ -41,3 +41,27 @@
 
 ### Constant and Immutable State Variables
 
+constant: Value has to be fixed at compile-time
+immutable: Value can be assigned at construction time
+It's also possible to define "constant: variables at the file level.
+
+
+Gas costs of constant and immutables are much lower compaed to regular state variables.
+
+- For a const, expression assigned to it is copied to all the places where it's accessed.
+- Immutable vars are evaluated at construction time and their value is copied to all the places in the code where they are accessed. 32 bytes are reserved for this, due to this const variables can be cheaper many times.
+
+- For constant Variables, the value has to be a const at a compile time and it has to be assigned where the variable is declared.
+- Expressions having side-effect on memory allocations are allowed,  but those that might have a side-effect on other memory objects are not. The built-in functions keccak256, sha256, ripemd160, ecrecover, addmod and mulmod are allowed (even though, with the exception of keccak256, they do call external contracts).
+
+#### Immutable
+
+- Variables declared as immutable are a bit less restricted than those declared as constant.
+- Immutables that are assigned at their declaration are only considered initialized once the constructor of the contract is executing.
+
+
+## Functions
+
+- Functions Outside the contracts are also called "free functions" and have internal visibility. The code is similar to internal library functions.
+
+
