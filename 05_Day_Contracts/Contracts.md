@@ -62,6 +62,4 @@ Gas costs of constant and immutables are much lower compaed to regular state var
 
 ## Functions
 
-- Functions Outside the contracts are also called "free functions" and have internal visibility. The code is similar to internal library functions.
-
 
