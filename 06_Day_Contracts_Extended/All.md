@@ -14,5 +14,3 @@
 
 - They can be define inside or outside of contracts(including interfaces and libraries).
 
-# Inheritance
-
