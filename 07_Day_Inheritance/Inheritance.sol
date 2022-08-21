@@ -123,3 +123,23 @@ contract Final is Base1, Base2 {
 Final inheritance graph for above contract is:
 Base2, Base1, Destructible, owned
 
+
+// Function Overriding
+
+contract Base
+{
+    function foo() virtual external view{}
+}
+
+contract Middle is Base{}
+
+contract Inherited is Middle{
+
+    //Doubt
+    //not changing function behaviour as virtual is not specified
+    //Just changing the mutability
+    function foo() override public pure{}
+}
+
+
+
