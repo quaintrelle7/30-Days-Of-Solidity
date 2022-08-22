@@ -23,4 +23,8 @@
 
 # Modifier Overriding
 
+- No overloading for modifiers.
+- Virtual keyword must be used on the overridden modifier.
+- override keyword must be used in overriding modifier.
+
 

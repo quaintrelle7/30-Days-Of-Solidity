@@ -156,3 +156,30 @@ contract B is A
 }
 
 // Modifier Overriding
+
+
+contract Base{
+    modifier foo() virtual {_;}
+
+}
+
+contract Inherited is Base{
+    modifier foo() override {_;}
+}
+
+//In case of multiple inheritance all direct base contracts must be specified.
+
+contract Base1
+{
+    modifier foo() virtual {_;}
+}
+
+contract Base2
+{
+    modifier foo() virtual {_;}
+}
+
+contract Inherited is Base1, Base2
+{
+    modifier foo() override(Base1, Base2) {_;}
+}
