@@ -9,4 +9,16 @@ A contract is abstract when:
 - It is a way for the designer of the abstract contract to say “any child of mine must implement this method”.
 
 
-# 
+# Interfaces
+
+- Interfaces are like Absract classes without any of the functions implemented
+- Can't inherit from other contracts but can from other interfaces.
+- All declared function must be external.
+- Can't declare a constructor.
+- Can't declare State variables, modifiers.
+- Denoted by 'interface'
+- All functions declared in interfaces are implicitly virtual.
+- Any functions that override them don not need the override keyword.
+- ***This does not automatically mean that an overriding function can be overridden again - this is only possible if the overriding function is marked virtual.
+
+
